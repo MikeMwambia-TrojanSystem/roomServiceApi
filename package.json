@@ -1,0 +1,30 @@
+{
+  "name": "consesys",
+  "version": "1.0.0",
+  "description": "To set up consyses take home test.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Consyses",
+    "Node.Js",
+    "TakeHome",
+    "Test"
+  ],
+  "author": "mikemwambia",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.0.2",
+    "typedi": "^0.10.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}
