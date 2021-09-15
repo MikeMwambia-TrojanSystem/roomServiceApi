@@ -57,9 +57,9 @@ class roomService {
     }
 
     //Update availability
-    async updateAvailability (id){
+    async updateAvailability (id,flag){
         return new Promise(async (resolve,reject)=>{
-            roomDao.updateOne({_id:id},{$set:{booked:false}},
+            roomDao.updateOne({_id:id},{$set:{booked:flag}},
                 (error,room)=>{
                     if(error){
                         reject(error);

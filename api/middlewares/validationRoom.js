@@ -14,6 +14,7 @@ const requestHandler = new RequestHandler(logger);
 const roomService = require(path.join(__dirname,'..','..','services','roomService.js'));
 let roomservice = new roomService();
 
+
 //Config
 const config = require(path.join(__dirname,'..','..','config')).config;
 
@@ -60,7 +61,6 @@ module.exports = class validation {
                 return;
             }
         }catch(err){
-            console.log(err);
             return requestHandler.sendError(this.req,this.res,new Error('Undefined route'));
         }
     }
@@ -151,8 +151,8 @@ module.exports = class validation {
         })
     }
 
-    async getAvailableRooms(doc){
-        await roomservice.getAvailableRooms(doc).then(async result=>{
+    async getAvailableRooms(){
+        await roomservice.getAvailableRooms().then(async result=>{
             requestHandler.sendSuccess(this.res,result,200);
         },error=>{
             requestHandler.sendError(this.req,this.res,error);
@@ -160,8 +160,6 @@ module.exports = class validation {
     }
 
     async populateBookingHistory(doc){
-        console.log(doc);
-        console.log('------------');
         await roomservice.populateBookingHistory(doc).then(async result=>{
             console.log(result);
             this.bookRoom(doc);

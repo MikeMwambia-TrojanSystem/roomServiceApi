@@ -1,3 +1,4 @@
+//To do : - Use eth address to signUp with a passport strategy
 //Put authentication logic here
 class userService {
 
