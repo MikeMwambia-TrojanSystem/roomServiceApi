@@ -5,6 +5,7 @@ const roomService = require('../services/roomService');
 let roomservice = new roomService();
 
 module.exports = async function runRoomUpdate(){
+//NB: Ensure it runs once.
 //Run a cron job
 //Queries all rooms
 //Checks the room data against the current time 

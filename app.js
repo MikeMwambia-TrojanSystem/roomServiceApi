@@ -11,7 +11,7 @@ const logger = new Logger();
 
 async function initApp (){
 
-  /*try{
+  try{
     //Workers
     if (cluster.isMaster) {
       for (let i = 0; i < numCPUs; i++) {
@@ -24,9 +24,9 @@ async function initApp (){
   }catch(err){
     //Log error
     logger.log('Cluster Init Error','error',err)
-  }*/
+  }
 
-  servers();
+  //servers();
 }
 
 initApp();
